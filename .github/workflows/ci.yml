@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+
+      - name: pnpm kur
+        uses: pnpm/action-setup@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Bağımlılıkları kur
+        run: pnpm install --frozen-lockfile
+
+      - name: Tip kontrolü
+        run: pnpm run typecheck
+
+      - name: Üretim derlemesi
+        run: pnpm run build

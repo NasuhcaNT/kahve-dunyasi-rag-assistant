@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Kahve Dünyası Bilgi Asistanı"
+description = "Kahve Dünyası hakkında kaynaklarına dayalı Türkçe yanıtlar veren; ürün, alerjen, sipariş ve marka bilgilerini veri setinden arayan bir soru-cevap asistanı."
+version = "1.0.0"
+id = "artifacts/kahve-dunyasi-rag"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20283
+
+[services.development]
+run = "pnpm --filter @workspace/kahve-dunyasi-rag run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kahve-dunyasi-rag", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kahve-dunyasi-rag/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20283"
+BASE_PATH = "/"
