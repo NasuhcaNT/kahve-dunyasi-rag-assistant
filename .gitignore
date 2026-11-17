@@ -47,6 +47,7 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+/.npm-cache/
 
 # Secrets
 .env

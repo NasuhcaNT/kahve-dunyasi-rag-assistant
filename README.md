@@ -4,6 +4,28 @@ Kaynak bağlantılarıyla cevap veren, TypeScript tabanlı bağımsız bir RAG (
 
 Kodun bileşenlerini ve bir sorunun sistemde nasıl işlendiğini adım adım görmek için [Türkçe mimari açıklamasını](docs/ARCHITECTURE_TR.md) okuyun.
 
+## Canlı demo
+
+[Canlı uygulamayı açın](https://kahve-dunyasi-bilgi-asistani.replit.app/)
+
+Canlı dağıtım bağımsız ve resmî olmayan bir teknik demodur. Dağıtım ortamına ayrıca yüklenen bilgi tabanı bu deponun veya MIT Lisansı'nın parçası değildir.
+
+## Ekran görüntüleri
+
+### Bağımsızlık ve güncellik uyarısı
+
+![Bağımsız demo ve güncellik uyarısı](docs/images/01-bagimsiz-demo-uyarisi.png)
+
+### Ana sayfa ve bilgi tabanı kapsamı
+
+![Uygulamanın masaüstü ana sayfası](docs/images/02-ana-sayfa.png)
+
+### Kaynak temelli asistan çalışma alanı
+
+![Bilgi asistanı ve kaynak paneli](docs/images/03-bilgi-asistani.png)
+
+[Mobil tam sayfa görünümünü açın](docs/images/04-mobil-gorunum.png)
+
 ## Önemli veri ve marka notu
 
 Bu depo yalnızca uygulama kodunu ve sentetik örnek veri şemasını lisanslar. Üçüncü taraf sitelerden elde edilen ürün metinleri, fiyatlar, görseller, logolar ve marka unsurları depoya dahil edilmez ve MIT Lisansı kapsamında değildir. Ayrıntılar için [DATA_NOTICE.md](DATA_NOTICE.md) dosyasını okuyun.
